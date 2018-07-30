@@ -11,4 +11,4 @@ const RNRedux =() => (
         <App/>>
     </Provider>
 );        
-AppRegistry.registerComponent('album', () => App);
+AppRegistry.registerComponent('album', () => RNRedux);

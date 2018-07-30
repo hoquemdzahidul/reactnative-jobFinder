@@ -15,10 +15,11 @@ import ListItem from './src/components/ListItem/ListItem';
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
 import PlaceDetail from './src/components/PlaceDetail/PlaceDetail';
+import {addPlace , deletePlace , selectPlace , deselectPlace} from './src/store/actions/index';
 
 
 type Props = {};
-export default class App extends Component<Props> {
+class App extends Component<Props> {
   state = {
     places: [],
     selectedPlace : null
@@ -93,3 +94,12 @@ const styles = StyleSheet.create ({
     backgroundColor: '#F5FCFF',
   }
 });
+const mapStateToProps = state => {
+  return{
+    places : state.places.places,
+
+    selectedPlace :  state.places.selectedPlace
+  };
+};
+
+export default connect() (App);

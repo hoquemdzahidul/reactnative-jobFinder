@@ -10,3 +10,4 @@ const rootReducers = combineReducers({
     {
         return createStore(rootReducers);
     };
+    export default configureStore;
